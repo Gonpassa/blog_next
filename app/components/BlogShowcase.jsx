@@ -10,3 +10,12 @@ export default function BlogHistory() {
     </div>
   );
 }
+
+/* Attributes needed for Blog Component
+Title
+SubHeading
+Date
+Image
+ContentText
+Link to blog ---- blog/1 --- blog/2
+*/

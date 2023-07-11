@@ -8,6 +8,13 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  function changeTheme() {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -16,24 +23,32 @@ export default function Navbar() {
     return null;
   }
   return (
-    <nav className="flex justify-around items-center mx-auto w-full text-lg h-16 border-b-[.5px] dark:border-b-zinc-50 border-b-zinc-900 dark:bg-zinc-950 shadow">
-      <h1 className="grow h-full flex justify-center items-center font-bold">
-        Saccades
-      </h1>
+    <nav className="flex justify-around items-center w-full text-lg h-16 border-b-[.5px] dark:border-b-zinc-50 border-b-zinc-900 dark:bg-zinc-950 shadow px-4">
+      <Link href="/">
+        <h1 className="grow h-full flex justify-center items-center font-bold hover:text-sky-400">
+          Saccades
+        </h1>
+      </Link>
       <ul className="list-none flex justify-between items-center grow h-full">
-        <li className="p-4 hover:border-x-2 hover:cursor-pointer transition-transform hover:text-sky-400 hover:border-sky-950">
-          <Link href="/">Home</Link>
-        </li>
-        <li className="p-4 hover:border-x-2 hover:cursor-pointer transition-transform hover:text-sky-400 hover:border-sky-950">
-          <Link href="/blog/123">Blogs</Link>
-        </li>
-        <li className="p-4 hover:border-x-2 hover:cursor-pointer transition-transform hover:text-sky-400 hover:border-sky-950">
-          <Link href="/about">About</Link>
-        </li>
+        <Link href="/">
+          <li className="p-4 hover:border-b-2 hover:cursor-pointer transition-transform hover:text-sky-400">
+            Home
+          </li>
+        </Link>
+        <Link href="/blog/123">
+          <li className="p-4 hover:border-b-2 hover:cursor-pointer transition-transform hover:text-sky-400">
+            Blog
+          </li>
+        </Link>
+        <Link href="/about">
+          <li className="p-4 hover:border-b-2 hover:cursor-pointer transition-transform hover:text-sky-400">
+            About
+          </li>
+        </Link>
       </ul>
       <div
-        className="flex justify-center cursor-pointer rounded-full border-2 h-8 w-8 items-center dark:hover:bg-sky-300 dark:hover:text-yellow-300 hover:text-white hover:bg-black"
-        onClick={() => setTheme("light")}
+        className="flex justify-center cursor-pointer rounded-full  h-8 w-8 items-center dark:hover:bg-sky-300 dark:hover:text-yellow-300 hover:text-white hover:bg-black transition-colors "
+        onClick={changeTheme}
       >
         {theme === "dark" ? <BsSunFill /> : <BsMoonStarsFill />}
       </div>

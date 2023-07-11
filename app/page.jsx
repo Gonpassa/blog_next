@@ -1,9 +1,11 @@
-import BlogHistory from "./components/BlogHistory";
+import BlogShowcase from "./components/BlogShowcase";
+import Banner from "./components/Banner";
 
 export default function Page() {
   return (
     <div className="h-full bg-inherit">
-      <BlogHistory />
+      <Banner />
+      <BlogShowcase />
     </div>
   );
 }

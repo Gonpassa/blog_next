@@ -1,7 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import ThemeProvider from "../lib/ThemeProvider";
+import Providers from "../lib/Providers";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -14,17 +13,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`min-h-screen text-zinc-600 bg-zinc-100 mx-auto dark:bg-zinc-900 dark:text-zinc-50 relative ${montserrat.className}`}
-      >
-        <ThemeProvider>
+      <Providers>
+        <body
+          className={`min-h-screen w-screen text-zinc-600 bg-zinc-100 mx-auto dark:bg-zinc-900 dark:text-zinc-50 relative ${montserrat.className}`}
+        >
           <Navbar />
-          <Banner />
           <main className="min-h-full mx-auto w-full md:max-w-[1000px] bg-inherit">
             {children}
           </main>
-        </ThemeProvider>
-      </body>
+        </body>
+      </Providers>
     </html>
   );
 }
