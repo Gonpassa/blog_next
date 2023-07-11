@@ -11,7 +11,7 @@ export default function BlogHistory() {
   );
 }
 
-/* Attributes needed for Blog Component
+/* Attributes needed for Blog Component Only 3 most recent blogs, others go in blog list.
 Title
 SubHeading
 Date
