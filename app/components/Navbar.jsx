@@ -23,7 +23,7 @@ export default function Navbar() {
     return null;
   }
   return (
-    <nav className="flex justify-around items-center w-full text-lg h-16 border-b-[.5px] dark:border-b-zinc-50 border-b-zinc-900 dark:bg-zinc-950 shadow px-4">
+    <nav className="flex justify-around items-center w-full text-lg h-16 border-b-[.5px] dark:border-b-zinc-50 dark:bg-zinc-950 drop-shadow px-4">
       <Link href="/">
         <h1 className="grow h-full flex justify-center items-center font-bold hover:text-sky-400">
           Saccades
