@@ -4,7 +4,7 @@ import BlogList from "./components/BlogList";
 
 export default function Page() {
   return (
-    <div className="h-full bg-inherit">
+    <div className="home bg-inherit h-full w-full">
       <Banner />
       <BlogShowcase />
       <BlogList />
