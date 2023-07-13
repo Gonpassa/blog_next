@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Providers>
         <body
-          className={`min-h-screen w-screen text-zinc-600 bg-zinc-100 mx-auto dark:bg-zinc-900 dark:text-zinc-50 relative ${montserrat.className}`}
+          className={`h-screen w-screen text-zinc-600 bg-zinc-100 mx-auto dark:bg-zinc-900 dark:text-zinc-50 relative ${montserrat.className} pt-16`}
         >
           <Navbar />
           <main className="min-h-full mx-auto w-full md:max-w-[1000px] bg-inherit">
