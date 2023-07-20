@@ -2,11 +2,14 @@ import mongoose from "mongoose";
 
 const PostSchema = new mongoose.Schema(
   {
-    title: String,
-    content: String,
-    Image: String,
+    headings: [String],
+    subheadings: [String],
+    images: [String],
+    bodyTexts: [String],
   },
   { timestamps: true }
 );
 
-export default mongoose.model("Post", PostSchema);
+const Post = mongoose.model.Post || mongoose.model("Post", PostSchema);
+
+export default Post;

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function BlogCard({ title, img, date }) {
   return (
-    <div className="h-[35%] mb-6 sm:w-[48%]">
+    <div className="h-[270px] mb-6 sm:w-[48%]">
       <div className="min-h-full grid grid-cols-1 grid-rows-[5fr_1fr_1fr] drop-shadow-sm border-[1px] bg-zinc-50 dark:bg-zinc-950 dark:border-zinc-900">
         <Link href="/" className="image relative overflow-hidden">
           <Image

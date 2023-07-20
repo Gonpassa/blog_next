@@ -2,7 +2,7 @@ import dbConnect from "@/utils/dbConnect";
 import Post from "@/models/Post";
 
 export default async function addBlogPost(req, res) {
-  /*   const { method } = req;
+  const { method } = req;
 
   await dbConnect();
 
@@ -21,5 +21,5 @@ export default async function addBlogPost(req, res) {
       res.setHeader("Allow", ["POST"]);
       res.status(405).end(`Method ${method} Not Allowed`);
       break;
-  } */
+  }
 }

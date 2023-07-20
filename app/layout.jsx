@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Providers from "../lib/Providers";
+import { Providers, AuthContext, AuthProvider } from "../lib/Providers";
+import Footer from "./components/Footer";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -18,7 +19,10 @@ export default function RootLayout({ children }) {
           className={`min-h-full w-screen text-zinc-600 bg-zinc-100 mx-auto dark:bg-zinc-900 dark:text-zinc-50 relative ${montserrat.className} pt-16`}
         >
           <Navbar />
-          <main className="md:max-w-[1000px] bg-inherit">{children}</main>
+          <main className="md:max-w-[1000px] bg-inherit min-h-max">
+            {children}
+          </main>
+          <Footer />
         </body>
       </Providers>
     </html>

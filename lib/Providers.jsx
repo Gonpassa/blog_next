@@ -1,8 +1,8 @@
 "use client";
 import { ThemeProvider } from "next-themes";
-import { useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 
-export default function Providers({ children }) {
+export function Providers({ children }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -14,4 +14,16 @@ export default function Providers({ children }) {
   }
 
   return <ThemeProvider attribute="class">{children}</ThemeProvider>;
+}
+
+export const AuthContext = createContext();
+
+export function AuthProvider({ children }) {
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  return (
+    <AuthContext.Provider value={{ isAdmin, setIsAdmin }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
