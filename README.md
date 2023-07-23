@@ -4,7 +4,7 @@ Fullstack Blog
 
 **Link to project:** (under construction)
 
-![Harmonee](https://github.com/Gonpassa/harmonee/blob/main/Screenshot.jpg?raw=true)
+<!-- ![Harmonee](https://github.com/Gonpassa/harmonee/blob/main/Screenshot.jpg?raw=true) -->
 
 ## How It's Made:
 
