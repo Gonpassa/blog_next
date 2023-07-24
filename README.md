@@ -18,6 +18,7 @@ Fullstack blogging template. Using mongodb as the database the blogger can submi
 ## Installation
 
 `npm install`
+`npm run dev`
 
 ---
 
