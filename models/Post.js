@@ -2,10 +2,11 @@ import mongoose from "mongoose";
 
 const PostSchema = new mongoose.Schema(
     {
-        headings: [String],
-        subheadings: [String],
-        images: [String],
-        bodyTexts: [String],
+        structure: [String],
+        heading: [String],
+        subheading: [String],
+        image: [String],
+        body: [String],
     },
     { timestamps: true }
 );
