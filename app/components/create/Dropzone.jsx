@@ -12,7 +12,6 @@ export default function MyDropzone({ className, name, id }) {
                 });
             }),
         ]);
-        console.log(files);
     }, []);
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         onDrop,
@@ -36,18 +35,11 @@ export default function MyDropzone({ className, name, id }) {
             </div>
             {/* Preview */}
 
-            <ul>
-                {files.map((file) => (
-                    <li key={file.name}>
-                        <Image
-                            src={file.preview}
-                            alt=""
-                            height={100}
-                            width={100}
-                        />
-                    </li>
+            <div className="relative w-[120%] h-44">
+                {files.map((file, i) => (
+                    <Image src={file.preview} alt="" fill={true} key={i} />
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
