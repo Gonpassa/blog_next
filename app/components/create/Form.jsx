@@ -53,6 +53,7 @@ export default function Form({ structure }) {
                 [name]: value,
             };
         });
+        console.log(formData);
     }
 
     async function handleSubmit(e) {
