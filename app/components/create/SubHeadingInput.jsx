@@ -1,5 +1,11 @@
-import { IoIosTrash } from "react-icons/io";
-export default function HeadingInput({ type, id, value, handleChange }) {
+import RemoveInput from "./RemoveInput";
+export default function HeadingInput({
+    type,
+    id,
+    value,
+    handleChange,
+    removeInput,
+}) {
     return (
         <div className="flex flex-col justify-between mb-4">
             <label
@@ -7,9 +13,7 @@ export default function HeadingInput({ type, id, value, handleChange }) {
                 className="font-bold flex justify-between items-center"
             >
                 Subheading
-                <span className="p-2 bg-zinc-50 rounded-md shadow text-zinc-150 ring-1 ring-gray-300 text-2xl dark:text-zinc-950">
-                    <IoIosTrash />
-                </span>
+                <RemoveInput removeInput={removeInput} id={id} key={id} />
             </label>
             <input
                 type="text"

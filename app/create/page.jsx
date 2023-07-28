@@ -15,12 +15,21 @@ export default function Page({ params }) {
         ]);
     }
 
+    function removeInput(e) {
+        const { id } = e.currentTarget;
+        setStructure((prevStructure) => {
+            const newStructure = prevStructure.filter((inp, idx) => idx != id);
+            return newStructure;
+        });
+    }
+
     if (!isAdmin) {
         return <></>;
     }
+
     return (
         <section className="bg-white full-blog mt-12 border-t-[2px] p-6 min-h-screen dark:bg-zinc-950 ">
-            <Form structure={structure} />
+            <Form structure={structure} removeInput={removeInput} />
             <ButtonsArray addInput={addInput} />
         </section>
     );

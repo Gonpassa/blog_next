@@ -1,4 +1,5 @@
 import { useState } from "react";
+import RemoveInput from "./RemoveInput";
 import {
     BtnBold,
     BtnItalic,
@@ -10,7 +11,13 @@ import {
 } from "react-simple-wysiwyg";
 import { IoIosTrash } from "react-icons/io";
 
-export default function BodyInput({ type, id, value, handleChange }) {
+export default function BodyInput({
+    type,
+    id,
+    value,
+    handleChange,
+    removeInput,
+}) {
     return (
         <div className="flex flex-col justify-between mb-4">
             <label
@@ -18,9 +25,7 @@ export default function BodyInput({ type, id, value, handleChange }) {
                 className="font-bold flex justify-between items-center mb-2"
             >
                 Body
-                <span className="p-2 bg-zinc-50 rounded-md shadow text-zinc-150 ring-1 ring-gray-300 text-2xl dark:text-zinc-950">
-                    <IoIosTrash />
-                </span>
+                <RemoveInput removeInput={removeInput} id={id} key={id} />
             </label>
             <EditorProvider>
                 <Editor
