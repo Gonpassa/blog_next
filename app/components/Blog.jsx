@@ -37,7 +37,10 @@ export default function Blog({
                         className="hover:scale-105 transition-transform"
                     />
                 </Link>
-                <p className="my-4 row-span-3 px-4 leading-normal">{body[0]}</p>
+                <p
+                    className="my-4 row-span-3 px-4 leading-normal"
+                    dangerouslySetInnerHTML={{ __html: body[0] }}
+                ></p>
             </article>
             <Link
                 href={`blog/${id}`}
