@@ -10,6 +10,7 @@ export default function Blog({
     structure,
     date,
 }) {
+    const bodyHTML = body[body.length - 1];
     return (
         <div className="post grid grid-cols-1 grid-rows-8 py-6 bg-zinc-50 dark:bg-zinc-950 h-[700px] border-y-2 dark:border-y-[.5px] dark:border-zinc-50">
             <section className="header row-span-3 flex flex-col justify-center px-4 mb-4">
@@ -28,7 +29,7 @@ export default function Blog({
             <article className="row-span-4 grid grid-cols-1 grid-rows-5">
                 <Link
                     href="/"
-                    className="w-full row-span-2 relative overflow-hidden"
+                    className="h-[40%] w-full relative overflow-hidden"
                 >
                     <Image
                         src={images[0]}
@@ -39,7 +40,7 @@ export default function Blog({
                 </Link>
                 <p
                     className="my-4 row-span-3 px-4 leading-normal"
-                    dangerouslySetInnerHTML={{ __html: body[0] }}
+                    dangerouslySetInnerHTML={{ __html: bodyHTML }}
                 ></p>
             </article>
             <Link
