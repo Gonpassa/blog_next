@@ -102,10 +102,8 @@ export default function Form({ structure, removeInput }) {
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ formData, structure }),
         };
-        const res = await fetch("/api/create", options).then((response) =>
-            response.json()
-        );
-        console.log(res);
+
+        const res = await fetch("/api/create", options);
     }
     return (
         <form onSubmit={handleSubmit}>

@@ -1,4 +1,4 @@
-import RemoveInput from "./RemoveInput";
+import RemoveButton from "./RemoveButton";
 export default function HeadingInput({
     type,
     id,
@@ -13,7 +13,7 @@ export default function HeadingInput({
                 className="font-bold flex justify-between items-center"
             >
                 Subheading
-                <RemoveInput removeInput={removeInput} id={id} key={id} />
+                <RemoveButton removeInput={removeInput} id={id} key={id} />
             </label>
             <input
                 type="text"

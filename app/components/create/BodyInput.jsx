@@ -1,5 +1,5 @@
 import { useState } from "react";
-import RemoveInput from "./RemoveInput";
+import RemoveButton from "./RemoveButton";
 import {
     BtnBold,
     BtnItalic,
@@ -25,7 +25,7 @@ export default function BodyInput({
                 className="font-bold flex justify-between items-center mb-2"
             >
                 Body
-                <RemoveInput removeInput={removeInput} id={id} key={id} />
+                <RemoveButton removeInput={removeInput} id={id} key={id} />
             </label>
             <EditorProvider>
                 <Editor

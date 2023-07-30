@@ -1,5 +1,5 @@
 import MyDropzone from "./Dropzone";
-import RemoveInput from "./RemoveInput";
+import RemoveInput from "./RemoveButton";
 export default function ImageInput({
     type,
     id,
