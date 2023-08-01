@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
                     className={`min-h-full w-screen text-zinc-600 bg-zinc-100 mx-auto dark:bg-zinc-900 dark:text-zinc-50 relative ${montserrat.className} pt-16`}
                 >
                     <Navbar />
-                    <main className="md:max-w-[1000px] bg-inherit min-h-max">
+                    <main className="md:max-w-[1000px] bg-inherit min-h-max md:mx-auto">
                         {children}
                     </main>
                     <Footer />
