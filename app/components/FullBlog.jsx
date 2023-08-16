@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Post from "../../models/Post";
+import getFormattedDate from "@/utils/getDate";
 
 export default function FullBlog({ blog }) {
     const { heading, subheading, createdAt, body, image, structure } = blog;
     console.log(blog);
+    const formattedDate = getFormattedDate(createdAt);
     //loop through structure.
     //switch statement.
     return (
@@ -19,8 +21,8 @@ export default function FullBlog({ blog }) {
                     </h2>
                 </div>
                 <div className="date p-2">
-                    <p className="text-center text-md font-bold uppercase">
-                        July 18, 2023
+                    <p className="text-center text-sm font-bold uppercase">
+                        {formattedDate}
                     </p>
                 </div>
             </header>
@@ -38,7 +40,7 @@ export default function FullBlog({ blog }) {
     );
 }
 /* 
-I need to dyunamically generate the 
+I need to dynamically generate the 
 blog structure {
     heading: []
     subheading: []

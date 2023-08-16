@@ -1,4 +1,4 @@
-export default function Header({ heading, subheading }) {
+export default function Header({ heading, subheading, date }) {
     return (
         <header className="flex flex-col justify-between mb-2">
             <div className="title p-6">

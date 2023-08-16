@@ -17,7 +17,7 @@ export default function BlogHistory({ blogs }) {
         );
     });
     return (
-        <div className="grid grid-cols-1 grid-rows-3 gap-y-8 bg-zinc-150 dark:bg-zinc-900">
+        <div className="grid grid-cols-1 grid-rows-3 gap-y-8 bg-zinc-150 dark:bg-zinc-900 h-[2100px]">
             {blogShowcase}
         </div>
     );

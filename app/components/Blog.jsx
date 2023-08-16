@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import getFormattedDate from "@/utils/getDate";
+import Header from "./BlogPost/Header";
 
 export default function Blog({
     id,
