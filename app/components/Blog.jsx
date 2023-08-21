@@ -17,23 +17,23 @@ export default function Blog({
     const formattedDate = getFormattedDate(date);
     return (
         <div className="post grid grid-cols-1 grid-rows-8 py-6 bg-zinc-50 dark:bg-zinc-950 row-span-1 border-y-2 dark:border-y-[.5px] dark:border-zinc-50">
-            <section className="header row-span-3 flex flex-col justify-center px-4 mb-4">
+            <section className="header row-span-3 flex flex-col justify-between px-4 mb-4 py-8">
                 <Link href={`blog/${id}`}>
-                    <h2 className="text-center tracking-widest text-lg font-bold transition-colors hover:text-sky-300 uppercase my-2">
+                    <h2 className="text-center tracking-widest text-xl font-bold transition-colors hover:text-sky-300 uppercase my-2">
                         {headings[0]}
                     </h2>
                 </Link>
                 <p className="text-center leading-snug text-md uppercase ">
                     {subheadings[0]}
                 </p>
-                <span className="date text-center uppercase font-semibold">
+                <span className="date text-center uppercase font-semibold pt-8">
                     {formattedDate}
                 </span>
             </section>
             <article className="row-span-4 grid grid-cols-1 grid-rows-5">
                 <Link
                     href="/"
-                    className="w-full relative overflow-hidden row-span-2"
+                    className="w-full relative overflow-hidden row-span-2 xs:"
                 >
                     <Image
                         src={images[0]}
